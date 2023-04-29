@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<script>
+    var siteWidth = 1280;
+    var scale = screen.width /siteWidth;
+
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'')
+</script>
+<head>
+    <link rel="stylesheet" href="videoDuration.css">
+    <meta name="viewport" content="width=1280, initial-scale=1">
+</head>
+<style>
+    
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+    <center><h1 class = "header">Video Duration Calculator</h1></center><br>
+    <form id="videoForm" class = "vf">
+        <label class = "mp" or="minutesPerVideo">Duration (Min):</label>
+        <input type="text" class = "mpi" id="minutesPerVideo" name="minutesPerVideo">
+        <button type="button" class = "addVideo" id="addVideoButton">Add Video</button>
+        <br>
+        <label class = "pb" for="playbackSpeed">Playback Speed:</label>
+        <input type="number" step="0.1" id="playbackSpeed" name="playbackSpeed" value="1">
+        <br>
+        <br>
+        <p id = totalMinutes class = "tm">Total Playtime (Min): 0</p>
+        <center><button class = "submit" type="button" id="calculateButton">Calculate Total Time</button></center>
+        <br>
+        <p class = "tt" id="totalTime">0 Hours -- 0 Minutes -- 0 Seconds</p>
+        <script src="main.js"></script>
+    </form>
+
+    <center><a onclick = "window.location.reload()" class = "refresh">Refresh</a></center><br>
+    <p class = "sig"> <a class = "github" href = "https://github.com/yotham" target = "_blank">Yotham Sage</a></p>
+
+</body>
+</html>
